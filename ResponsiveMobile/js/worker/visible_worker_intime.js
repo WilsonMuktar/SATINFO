@@ -1,0 +1,6 @@
+importScripts("../MatricesnVector/sylvester.js")
+importScripts("../../../cesium24/Cesium.js")
+self.onmessage=e=>{const{sgp4arrays}=e.data;var totalvissat=calvisible(sgp4arrays);self.postMessage({totalvissat:totalvissat});};function calvisible(SGP4Array){var lat=39;var lon=116;var GSlatlon=ECEFlatlon(lat,lon);var GS=$V([GSlatlon.x,GSlatlon.y,GSlatlon.z]);var GSu=GS.devide(norm(GS));var H=$M([[0,0,0,0]]);var j=0;var Positions=[];var totalvis=0;for(var i=0;i<SGP4Array.length;i++){var p=Cesium.Cartesian3.fromDegrees(SGP4Array[i][1]*180.0/Math.PI,SGP4Array[i][0]*180.0/Math.PI,SGP4Array[i][2]);var SAT=$V([p.x,p.y,p.z]).subtract(GS);var SATu=SAT.devide(norm(SAT));if(Math.abs(Math.acos(GSu.dot(SATu)))<(Math.PI/2-(Math.PI/12))){Positions.push(SGP4Array[i]);totalvis++;}}
+return Positions;}
+function ECEFlatlon(lat,lon){var newlon=(lon+((this.is2DMODE==false&&ecefeci=='ECI')?calculatecurrentearthrotation()-90:0));return{x:newlon>=180?newlon-360:newlon,y:lat,z:100000};}
+function norm(vector){var V=vector.elements||vector;return Math.sqrt((V[0]*V[0])+(V[1]*V[1])+(V[2]*V[2]));}

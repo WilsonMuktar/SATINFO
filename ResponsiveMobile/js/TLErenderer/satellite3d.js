@@ -1,0 +1,4 @@
+function satellite3d(viewer,position){this.viewer=viewer;this.createsatellite(position);}
+satellite3d.prototype.removesatellite=function(){this.model=this.model&&this.model.destroy();this.viewer.scene.primitives.remove(this.model);}
+satellite3d.prototype.movesatellite=function(position){this.removesatellite();this.createsatellite(position);}
+satellite3d.prototype.createsatellite=function(position){this.position=Cesium.Transforms.eastNorthUpToFixedFrame(position);this.model=Cesium.Model.fromGltf({url:'../Assets/gltf/satbox/omid.glb',modelMatrix:this.position,show:true,scale:500,minimumPixelSize:128,maximumScale:20000,allowPicking:false,debugShowBoundingVolume:false,debugWireframe:false});this.viewer.scene.primitives.add(this.model);}

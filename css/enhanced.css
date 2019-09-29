@@ -1,0 +1,308 @@
+  /************End Global**************/
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.6em;
+}
+/************End Global**************/
+
+/************End Global**************/
+.btn {
+	display: inline-block;	
+}
+/************End Global**************/
+
+
+/************Structure**************/
+.logo {
+	margin: 0;
+	font-size: 1.6em;
+	position: relative;
+	z-index: 1;
+}
+.logo a {
+	display: block;
+	height: auto;
+	padding: 10px 50px 0px 50px;
+}
+.nav-anchors {
+	display: none;
+}
+.nav {
+	/*border-left: 1px solid #9bddff;
+	border-right: 1px solid #9bddff;*/
+}
+header[role="banner"] .nav {
+	float: left;
+	clear: none;
+	margin: 0;
+	border-top: 0;
+}
+.search {
+	border: 0;
+	padding: 0;
+	position: absolute;
+	top: 0.8em;
+	right: 1em;
+	width: 10em;
+}
+.queryselectorall .search, .queryselectorall [role="banner"] .nav {
+	display: block;
+}
+.performance-main {
+	padding-bottom: 2em;
+}
+.performance-img {
+	float: left;
+	width: 50%;
+	height: 100%;
+	margin-top: 0.5em;
+}
+.performance-main > header {
+	padding-top: 1em;
+}
+.performance-main > header, .performance-desc, .performance-form, .performance-utils, .performance-description {
+	padding-left: 2em;
+	margin-left: 50%;
+}
+/*Aux content*/
+.aux {
+	padding: 1em 0;
+}
+.aux header {
+	cursor: default;
+	padding: 0;
+	border: 0;
+	
+}
+.aux header a:after, .aux header a.open:after {
+	content: "";
+}
+[aria-hidden="true"] {
+	display: block;
+}
+.performance-description header {
+	display: none;
+}
+.performance-header{
+	display:block;
+}
+.reviews {
+	padding-bottom: 3em;
+}
+/*Editor*/
+.Editor-performances {
+	clear: both;
+	border: 0;
+}
+.Editor-performances header {
+	border: 0;
+}
+.Editor-performances li {
+	width: 10%;
+}
+.Editor-nav a {
+	position: absolute;
+	top: 50%;
+	left: -2.5em;
+	z-index: 0;
+	display: block;
+	height: 160px;
+	width: 2.5em;
+	text-indent: -99999em;
+	background: url(http://www.tiffany.com/Shared/images/misc/arrow2_left_on.gif) no-repeat 50% -65px;	
+}
+.Editor-nav a.nav-next {
+	left: auto;
+	right: -2.5em;
+	background: url(http://www.tiffany.com/Shared/images/misc/arrow2_right_on.gif) no-repeat 50% -65px;	
+}
+/*Reviews*/
+.reviews {
+	border: 0;
+}
+.reviews-list img {
+	max-width: 6em;
+	max-height: 6em;
+	margin: 0 1em 0 0;
+}
+.review-meta {
+	font-size: 1em;
+	float: left;
+	width: 30%;
+	padding-top: 0.8em;
+}
+.review-content {
+	clear: none;
+	padding-top: 0.8em;
+	margin-left: 50%;
+}
+.reviews .btn {
+	display: block;
+	margin: 0 auto;
+	max-width: 11em;
+}
+
+/*Footer*/
+.footer ul {
+	margin: 0;	
+}
+.footer .nav {
+	float: left;	
+}
+.footer .nav li a {
+	padding: 1.2em;
+	line-height: 1;
+}
+.footer ul.service-links {
+	float: right;
+	margin-top: 0.9em;
+}
+.service-links li.tel {
+	display: inline-block;
+}	
+.service-links li.tel a {
+	display: inline;	
+}
+#scroll-up{
+	display: none;
+}
+/************End Structure**************/
+
+@media screen and (min-width: 40.5em) and (max-width: 60em) {
+	.performance-img {
+		width: 100%;
+		height: 100%;
+	}
+	.performance-main > header, .performance-desc, .performance-form, .performance-utils, .performance-description {
+		margin-left: 60%;
+		padding-left: 1em;
+	}
+	#scroll-up{
+		display: block;
+	}
+}
+
+
+@media screen and (min-width: 60em) {
+	.performance-img {
+		width: 100%;
+		margin-top:10px;
+	}
+	.performance-desc, .performance-form, .performance-utils {
+		margin-left: 80%;
+		padding-left: 2em;
+	}
+	.performance-description{
+		padding-top:50%;
+		margin-left:0px;
+	}
+	.performance-header{
+		display:none;
+	}
+	.performance-share {
+		margin: 0;
+		width: 19%;
+		float: left;
+	}
+	.img-container {
+		margin-left: 7em;
+	}
+	.performance-img nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 6em;
+		margin : 5px;
+	}
+	.performance-img nav li {
+		display: block;
+		margin: 0 0 0.3em;
+	}
+	.performance-img nav img {
+		width: auto;
+	}
+	.submit-form input {
+		position: relative;
+		z-index: 1;
+	}
+	.performance-utils {
+		position: relative;
+		z-index: 0;
+	}
+	.reviews-list > li {
+		padding: 2em 7em;
+	}
+	
+	.editor-form{
+		width:50%;
+		margin-top:15px;
+	}
+	.TLE-DATA{
+		width:90%;
+		float:left;
+		left:0;
+		padding:5%;
+	}
+	#scroll-up{
+		display: none;
+	}
+	
+	.green{
+		color:#000;
+		background:#0F0;
+	}
+	.green:hover{
+		color:#000;
+		background:#0F0;
+	}
+}
+
+/************Comment Mode**************/
+#comment-link { 
+	position: fixed; 
+	bottom: 0; right: 0; 
+	z-index: 4; 
+	width: 100px; 
+	height: 100px; 
+	overflow: hidden;
+	line-height: 1;
+}
+.csstransforms #comment-link a { 
+	-webkit-transform: rotate(-45deg); 
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg); 
+	-ms-transform: rotate(-45deg); 
+	width: 182px; 
+	height: 100px; 
+	margin-top: 40px;
+	padding: 5px; 
+	text-align: center; 
+}
+#comment-link a strong {
+	display: block;
+}
+#comment-container {
+	position: fixed;
+	top: auto;
+	padding: 1em 1em 4em;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	-webkit-transition: bottom 0.3s ease-out;
+	-moz-transition: bottom 0.3s ease-out;
+  	-webkit-transition: bottom 0.3s ease-out;
+  	-ms-transition: bottom 0.3s ease-out; 
+  	-o-transition: bottom 0.3s ease-out; 
+  	transition:  bottom 0.3s ease-out;
+}
+#close-comments {
+	display: block;	
+}
+
+/* For IE 7, which doesn't support display: inline-block; */
+label, input,textarea, .nav-anchors li, .nav li, .price, .star, .star li, .performance-img nav, .performance-img nav li, .performance-utils a, .reviews header h2, .footer li {
+	zoom: 1;
+	*display: inline;
+}

@@ -1,0 +1,8 @@
+<script src=GeoFunctions.js></script><script src=MathUtils.js></script><script src=J2kCoordinateConversion.js></script><script src=AstroConst.js></script><script src=Time.js></script><script src=TLE.js></script><script src=SGP4.js></script><script src=SGP4unit.js></script><script src=SGP4utils.js></script><script src=SGP4SatData.js></script><script src=SatelliteTleSGP4.js></script><div><input type=file accept=text/* name=TLE_file id=TLE_file onchange=fileSelected(); style=width:200px></div><script>var currentJulianDate=new Time();function getCurrentJulianDate(){return currentJulianDate;}
+function fileSelected(){var iMaxFilesize=1048576;var oFile=document.getElementById('TLE_file').files[0];var rFilter=/^(text\/plain)$/i;if(!rFilter.test(oFile.type)){alert('Please choose text!');return;}
+if(oFile.size>iMaxFilesize){alert('Max Size exceed!');return;}
+var title="";var line1="";var line2="";if(oFile){var r=new FileReader();r.onload=function(e){var contents=e.target.result;var contentarray=contents.split("\n");for(var i=0;i<contentarray.length;i++){if(contentarray[i].substr(0,1)=='1'){line1=contentarray[i];}
+else if(contentarray[i].substr(0,1)=='2'){line2=contentarray[i];}
+else{title=contentarray[i];}
+if(title!=""&&line1!=""&&line2!=""){alert(title+" "+line1+" "+line2);var sgp4=new SGP4(null,title,line1,line2);title="";line1="";line2="";break;}}}
+r.readAsText(oFile);}else{alert("Failed to load file");}}</script>
